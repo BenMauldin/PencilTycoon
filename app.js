@@ -6,6 +6,12 @@ const getRandNum = max => (
     1 + Math.floor(Math.random() * max)
 );
 
+const loseGame = msg => {
+    alert(msg);
+    alert("Your pencil business has failed.");
+    location.reload();
+}
+
 // business
 let fundsNum = 100;
 let pencilsNum = 0;
@@ -104,7 +110,7 @@ buyLead.addEventListener('click', () => {
         fundsNum -= leadPriceNum;
         funds.innerHTML = fundsNum;
         leadInventory.innerHTML = leadInventoryNum;
-    } else alert('Insufficient Funds!');
+    } else loseGame('Insufficient Funds!');
 });
 
 buyWood.addEventListener('click', () => {
@@ -113,7 +119,7 @@ buyWood.addEventListener('click', () => {
         fundsNum -= woodPriceNum;
         funds.innerHTML = fundsNum;
         woodInventory.innerHTML = woodInventoryNum;
-    } else alert('Insufficient Funds!');
+    } else loseGame('Insufficient Funds!');
 });
 
 buyEraser.addEventListener('click', () => {
@@ -122,14 +128,14 @@ buyEraser.addEventListener('click', () => {
         fundsNum -= eraserPriceNum;
         funds.innerHTML = fundsNum;
         eraserInventory.innerHTML = eraserInventoryNum;
-    } else alert('Insufficient Funds!');
+    } else loseGame('Insufficient Funds!');
 });
 
 hire.addEventListener('click', () => {
     if (fundsNum >= wageNum) {
         employeeNum++;
         employees.innerHTML = employeeNum;
-    } else alert('Insufficient Funds!');
+    } else loseGame('Insufficient Funds!');
 });
 
 fire.addEventListener('click', () => {
@@ -209,7 +215,7 @@ const updateEmployeePay = () => {
                 fundsNum -= wageNum * employeeNum;
                 funds.innerHTML = fundsNum;
                 wage.innerHTML = wageNum;
-            } else alert('Insufficient Funds');
+            } else loseGame('Insufficient Funds!');
         }
     }, employeeTime);
 };
