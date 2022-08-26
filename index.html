@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylsheet" href="styles.css">
+    <title>PencilTycoon</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+</head>
+<body>
+    <header>
+        <h2>Pencils: <span id="pencils"></span><h2>
+        <button id="make-pencil">Make Pencil</button>
+    </header>
+    <main>
+        <div id="business">
+            <h4>Business</h4>
+            <hr>
+            <p>
+                <ul>
+                    <li>Funds: $<span id="funds"></span></li>
+                    <li>Inventory: <span id="inventory"></span></li>
+                    <li>Price Per Pencil: $<span id="price-per-pencil"></span></li>
+                </ul>
+                <div id="price">
+                    <button id="lower-price">Lower Price</button>
+                    <button id="raise-price">Raise Price</button>
+                </div>
+                Consumer Demand: <span id="consumer-demand"></span>%
+            </p>
+        </div>
+        <div id="manufacturing">
+            <h4>Manufacturing</h4>
+            <hr>
+            <div id="material-inventory">
+                <p>
+                    Inventory
+                    <ul>
+                        <li>Lead: <span id="lead"></span></li>
+                        <li>Wood: <span id="wood"></span></li>
+                        <li>Erasers: <span id="eraser"></span></li>
+                    </ul>
+                </p>
+            </div>
+            <div id="market">
+                <p>
+                    <button id="buy-lead">Buy Lead</button> Cost Per Unit: $<span id="lead-price"></span>
+                    <br>
+                    <button id="buy-wood">Buy Wood</button> Cost Per Unit: $<span id="wood-price"></span>
+                    <br>
+                    <button id="buy-eraser">Buy Eraser</button> Cost Per Unit: $<span id="eraser-price"></span>
+                </p>
+            </div>
+            <div id="employees">
+                <p>
+                    Employees: <span id="employee-count"></span>
+                    <br>
+                    <button id="hire">Hire</button><button id="fire">Fire</button> Wage: $<span id="wage"></span>/7 seconds
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="app.js"></script>
+</html>
